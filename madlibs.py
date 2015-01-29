@@ -28,6 +28,15 @@ def greet_person():
 
     return render_template("compliment.html", person=player, compliment=compliment)
 
+@app.route('/game')
+def show_game_form():
+    player = request.args.get("person")
+    if request.args.get("play_game") == "no":
+        return render_template("goodbye.html", person=player)
+    else:
+        return render_template()
+
+
 
 if __name__ == '__main__':
     # debug=True gives us error messages in the browser and also "reloads" our web app
