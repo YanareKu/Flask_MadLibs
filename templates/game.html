@@ -5,8 +5,35 @@
     <link rel="stylesheet" href="/static/madlibs.css">
 </head>
 <body>
-    <h1> Madlibs! </h1>
+    <h1> Madlibs! POST TEST</h1>
         <form action= "/madlib" method="post"> 
+            <label>Name a person: <input type="text" name="person_answer"></label>
+            <br>
+            <label>Pick a color: <select name="color_answer"></label>
+                <label><option value="red">Red</option></label>
+                <label><option value="blue">Blue</option></label>
+                <label><option value="green">Green</option></label>
+                <label><option value="yellow">Yellow</option></label>
+            </select>
+            <br>
+            <label>Provide a noun: <input type="text" name="noun_answer"></label>
+            <br>
+            <label>Provide an adjective: <input type="text" name="adj_answer"></label>
+            <br>
+            <label>Provide an verb: <input type="text" name="verb_answer"></label>
+            <br>
+            <label>Pick a pet: <input type="radio" name="pet_answer" value="dog">Dog</label>
+            <label><input type="radio" name="pet_answer" value="cat">Cat</label>
+            <label><input type="radio" name="pet_answer" value="balloonicorn">Balloonicorn</label>
+            <label><input type="radio" name="pet_answer" value="chinchilla">Chinchilla</label>
+            <br>
+            <label>Provide an adverb: <input type="text" name="adv_answer"></label>
+            <br>
+            <label><input type="submit"></label>
+        </form><br>
+        <br>
+            <h1> Madlibs! GET TEST</h1>
+        <form action= "/madlib"> 
             <label>Name a person: <input type="text" name="person_answer"></label>
             <br>
             <label>Pick a color: <select name="color_answer"></label>

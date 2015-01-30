@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="/static/madlibs.css">
 </head>
 <body>
-    <p>Hi {{ person }}! Do you want to play a game!</p>
+    <p>Hi {{ person }}! {{compliments}}</p>
     <form action ="/game">
        <label><input type="radio" name="play_game" value="yes"> Yes</label>
        <label><input type="radio" name="play_game" value="no"> No</label>
