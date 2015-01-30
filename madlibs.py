@@ -28,21 +28,31 @@ def greet_person():
 
 
 
-@app.route('/game')
+@app.route('/game', methods=['GET', 'POST'])
 def show_game_form():
     if request.args.get("play_game") == "no":
         return render_template("goodbye.html")
     else:
         return render_template("game.html")
 
-@app.route("/madlib")
+@app.route("/madlib", methods=['GET', 'POST'])
 def show_madlib():
     p_person = request.args.get("person_answer")
     p_color = request.args.get("color_answer")
     p_noun = request.args.get("noun_answer")
     p_adjective = request.args.get("adj_answer")
+    p_verb = request.args.get("verb_answer")
+    p_pet = request.args.get("pet_answer")
+    p_adverb = request.args.get("adv_answer")
 
-    return render_template("madlib.html", person=p_person, color=p_color, noun=p_noun , adjective=p_adjective)
+    AWESOMENESS = ["madlib.html", "madlib2.html", "madlib3.html", "madlib4.html"]
+
+    rand_madlib = choice(AWESOMENESS)
+
+
+    return render_template(rand_madlib, person=p_person, 
+        color=p_color, noun=p_noun , adjective=p_adjective, 
+        verb=p_verb, pet=p_pet, adverb=p_adverb)
 
 if __name__ == '__main__':
     # debug=True gives us error messages in the browser and also "reloads" our web app

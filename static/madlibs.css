@@ -1,0 +1,19 @@
+p {
+    font-family: Arial, sans-serif;
+    width: 500px;
+}
+
+form {
+    font-family: Arial, sans-serif;
+    color:#224C70;
+}
+
+h1 {
+    font-family: Helvetica, sans-serif;
+    color:#3B4669;
+}
+
+input[type=text] {
+    border: 2px solid #3B4669;
+    border-radius: 25px;
+}
